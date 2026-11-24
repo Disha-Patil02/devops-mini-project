@@ -29,7 +29,7 @@ pipeline {
 
     stage('Deploy to App Server') {
       steps {
-        withCredentials([sshUserPrivateKey(credentialsId: 'app-server-key',
+        withCredentials([sshUserPrivateKey(credentialsId: 'app-server',
                           keyFileVariable: 'KEY', usernameVariable: 'SSH_USER')]) {
           sh """
             ssh -o StrictHostKeyChecking=no -i \$KEY \$SSH_USER@${APP_SERVER} '
