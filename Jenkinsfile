@@ -2,9 +2,9 @@ pipeline {
   agent any
 
   environment {
-    IMAGE      = "YOUR_DOCKERHUB_USERNAME/flask-app"
+    IMAGE      ="dishapatil02/flask-app"
     TAG        = "${BUILD_NUMBER}"
-    APP_SERVER = "APP_SERVER_IP"
+    APP_SERVER = "15.206.163.158"
   }
 
   stages {
