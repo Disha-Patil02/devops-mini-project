@@ -4,7 +4,7 @@ pipeline {
   environment {
     IMAGE      = "123456789009873/flask-app"
     TAG        = "${BUILD_NUMBER}"
-    APP_SERVER = "15.206.163.158"
+    APP_SERVER = "13.233.131.39"
   }
 
   stages {
