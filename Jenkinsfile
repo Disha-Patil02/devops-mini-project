@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    IMAGE      ="dishapatil02/flask-app"
+    IMAGE      = "123456789009873/flask-app"
     TAG        = "${BUILD_NUMBER}"
     APP_SERVER = "15.206.163.158"
   }
