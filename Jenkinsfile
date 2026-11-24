@@ -35,7 +35,7 @@ pipeline {
             ssh -o StrictHostKeyChecking=no -i \$KEY \$SSH_USER@${APP_SERVER} '
               docker pull ${IMAGE}:${TAG};
               docker rm -f flask-app || true;
-              docker run -d --name flask-app --restart always -p 5000:5000 ${IMAGE}:${TAG}
+              docker run -d --name flask-app --restart always -e APP_VERSION=${TAG} -p 5000:5000 ${IMAGE}:${TAG}
             '
           """
         }
